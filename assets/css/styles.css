@@ -1,0 +1,141 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+
+:root {
+    --bg-primary: #2C2C2C;
+    --bg-secondary: #242424;
+    --bg-ternary: #393939;
+    --border-color: #444;
+    --primary-color: #ff7066;
+    --secondary-color: #0DD657;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+
+/* To do Container */
+
+#main-container {
+    background-color: var(--bg-secondary);
+    position: relative;
+    max-width: 50%;
+    margin: 5vh auto 0 auto;
+    padding: 30px;
+}
+
+/* add-container */
+
+#add-container {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#add-container input, #add-container button {
+    padding: 10px;
+    background-color: var(--bg-ternary);
+    border: none;
+    width: 80%;
+    display: inline-block;
+}
+
+#add-container button {
+    width: 18%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#add-container button i {
+    color: var(--primary-color);
+}
+
+#add-container button:hover {
+    background-color: var(--primary-color);
+}
+
+#add-container button:hover > i {
+    color: var(--bg-secondary);
+}
+
+/* Task container */
+
+.task {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+.task:hover .bi-trash {
+    display: block;
+}
+
+.bi.bi-check2-circle {
+    cursor: pointer;
+    padding: 7px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.bi.bi-check2-circle.done {
+    color: var(--secondary-color);
+}
+
+.bi.bi-check2-circle.done:hover {
+    color: var(--border-color);
+}
+
+.bi.bi-check2-circle:hover, .bi.bi-trash:hover {
+    color: var(--primary-color);
+}
+
+.bi.bi-trash {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+#empty-tasks {
+    text-align: center;
+}
+
+/* mobile */
+@media(max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    #main-container {
+        max-width: 100%;
+        margin-top: 0px;
+    }
+
+    .bi.bi-trash {
+        display: block;
+    }
+
+}
